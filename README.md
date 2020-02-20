@@ -1,7 +1,7 @@
-<h2 align="center">Webpack配置Vue项目的起步</h2></br>
+<h2 align="center">Webpack配置Vue项目</h2></br>
 <p align="center">
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/made-with-vue.svg)](https://forthebadge.com)
+    <a href="https://forthebadge.com"><img src="https://forthebadge.com/images/badges/made-with-javascript.svg"></a>
+    <a href="https://forthebadge.com"><img src="https://forthebadge.com/images/badges/made-with-vue.svg"></a>
 </p>
 <h2 align="center">配置说明</h2>
 
