@@ -1,4 +1,5 @@
-<h2 align="center">Webpack配置Vue项目</h2></br>
+<h2 align="center">Webpack Vue项目起步</h2></br>
+<p>Webpack Vue项目的起步配置</p>
 <p align="center">
     <a href="https://forthebadge.com"><img src="https://forthebadge.com/images/badges/made-with-javascript.svg"></a>
     <a href="https://forthebadge.com"><img src="https://forthebadge.com/images/badges/made-with-vue.svg"></a>
