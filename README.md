@@ -15,7 +15,10 @@
 <h2 align="center">起步</h2>
 
     npm clone https://github.com/HTandMY/webpack-vue-start.git
+
     cd webpack-vue-start
+
     npm install
+    
     npm run serve
 
