@@ -6,7 +6,7 @@
 </p>
 <h2 align="center">配置说明</h2>
 
-* 参考 Vue-Cli3 的框架配置格式，并将public文件夹移入src文件夹中
+* 参考 Vue-Cli 的框架配置格式，并将public文件夹移入src文件夹中
 * 使用babel
 * 包含以下Vue套件
     * Vue2
