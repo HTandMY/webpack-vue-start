@@ -26,7 +26,7 @@ module.exports = {
             chunks: 'all',
             cacheGroups: {
                 vendors: {
-                    filename: 'js/vendors.[hash:8].[chunkhash:8].js'
+                    name: 'js/vendors.[hash:8].[chunkhash:8].js'
                 }
             }
         }
