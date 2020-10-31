@@ -3,16 +3,18 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { VueLoaderPlugin } = require("vue-loader");
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
+    mode: 'development',
     resolve: {
-        extensions: [".js", ".vue", ".scss", ".css"],
+        extensions: [".js", ".vue", ".scss", ".css"],   //import时允许隐藏的扩展名
         alias:{
             'vue$': 'vue/dist/vue.esm.js',
             '@': path.resolve(__dirname, 'src'),
         }
     },
-    devtool: "source-map",
+    devtool: "eval-cheap-module-source-map",            //开发模式下代码映射模式
     entry: {
         index: './src/main.js',
     },
@@ -29,7 +31,15 @@ module.exports = {
                     name: 'js/vendors.[hash:8].[chunkhash:8].js'
                 }
             }
-        }
+        },
+        minimize: true,                         //压缩代码
+        minimizer: [new UglifyJsPlugin({        //压缩代码使用的插件
+            uglifyOptions: {
+                output: {
+                    comments: false,
+                }
+            }
+        })]
     },
     devServer: {
         contentBase: './dist'
@@ -38,6 +48,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new VueLoaderPlugin(),
         new MiniCssExtractPlugin(),
+        new UglifyJsPlugin(),
         new HtmlWebpackPlugin({
             title: 'webpack',
             template: './src/public/index.html',
