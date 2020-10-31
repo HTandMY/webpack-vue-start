@@ -25,12 +25,7 @@ module.exports = {
     },
     optimization: {
         splitChunks: {
-            chunks: 'all',
-            cacheGroups: {
-                vendors: {
-                    name: 'js/vendors.[hash:8].[chunkhash:8].js'
-                }
-            }
+            chunks: 'all'
         },
         minimize: true,                         //压缩代码
         minimizer: [new UglifyJsPlugin({        //压缩代码使用的插件
