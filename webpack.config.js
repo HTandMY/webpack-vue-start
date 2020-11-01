@@ -37,13 +37,12 @@ module.exports = {
         })]
     },
     devServer: {
-        contentBase: './dist'
+        contentBase: './src/public'
     },
     plugins: [
         new CleanWebpackPlugin(),
         new VueLoaderPlugin(),
         new MiniCssExtractPlugin(),
-        new UglifyJsPlugin(),
         new HtmlWebpackPlugin({
             title: 'webpack',
             template: './src/public/index.html',
@@ -57,6 +56,11 @@ module.exports = {
                 test: /\.vue$/,
                 use: "vue-loader"
             },
+            {   
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: "babel-loader" 
+            },
             {
                 test: /\.(sa|sc|c)ss$/,
                 use: [
@@ -65,11 +69,6 @@ module.exports = {
                     'css-loader',
                     'sass-loader',
                 ]
-            },
-            {   
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: "babel-loader" 
             },
             {
                 test: /\.(png|jpg|gif)$/,
